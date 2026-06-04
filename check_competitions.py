@@ -12,6 +12,7 @@ def send_notification(ntfy_channel: str, title: str, message: str):
         data=full_message.encode("utf-8"),
         headers={
             "Title": "Yleisurheilua tulossa!",
+            "Priority": "urgent",
             "Tags": "runner,calendar",
         },
         method="POST",
