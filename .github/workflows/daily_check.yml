@@ -25,4 +25,5 @@ jobs:
         env:
           PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
+          PUSHOVER_GROUP_KEY: ${{ secrets.PUSHOVER_GROUP_KEY }}
         run: python check_competitions.py
