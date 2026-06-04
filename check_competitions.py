@@ -24,7 +24,7 @@ def send_notification(title: str, message: str):
 def format_broadcast(comp: dict) -> str:
     tv_channel = comp.get("channel")
     time = comp.get("broadcast_start_time")
-    if channel and time:
+    if tv_channel and time:
         return f"📺 {tv_channel} klo {time}"
     elif channel:
         return f"📺 {tv_channel} (lähetysaika ei tiedossa)"
