@@ -5,13 +5,10 @@ from datetime import date, datetime
 import os
 
 
-def send_notification(title: str, message: str):
-    app_token = os.environ["PUSHOVER_APP_TOKEN"]
-    user_key = os.environ["PUSHOVER_USER_KEY"]
-
+def send_notification(title: str, message: str, recipient: str):
     payload = urllib.parse.urlencode({
-        "token": app_token,
-        "user": user_key,
+        "token": os.environ["PUSHOVER_APP_TOKEN"],
+        "user": recipient,
         "title": title,
         "message": message,
         "priority": 1,
@@ -23,7 +20,17 @@ def send_notification(title: str, message: str):
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=10) as resp:
-        print(f"  Notifikaatio lähetetty (HTTP {resp.status})")
+        print(f"  Lähetetty (HTTP {resp.status})")
+
+
+def send_to_all(title: str, message: str):
+    recipients = {
+        "user": os.environ["PUSHOVER_USER_KEY"],
+        "group": os.environ["PUSHOVER_GROUP_KEY"],
+    }
+    for name, key in recipients.items():
+        print(f"  → {name}")
+        send_notification(title, message, key)
 
 
 def format_broadcast(comp: dict) -> str:
@@ -48,7 +55,7 @@ def build_message(comp: dict, days_until: int) -> tuple[str, str]:
     else:
         body = f"📅 {name} — {days_until} pv päästä\n{broadcast}"
 
-    return "🏃📅 Yleisurheilua tulossa!", body
+    return "🏃 Yleisurheilua tulossa!", body
 
 
 def main():
@@ -72,7 +79,7 @@ def main():
 
         title, body = build_message(comp, days_until)
         print(f"Lähetetään: {title} | {body}")
-        send_notification(title, body)
+        send_to_all(title, body)
         notifications_sent += 1
 
     print(f"\nValmis. Lähetettiin {notifications_sent} notifikaatiota.")
