@@ -23,7 +23,6 @@ jobs:
 
       - name: Run competition checker
         env:
-          PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
-          PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
-          PUSHOVER_GROUP_KEY: ${{ secrets.PUSHOVER_GROUP_KEY }}
+          NTFY_USER_CHANNEL: ${{ secrets.NTFY_USER_CHANNEL }}
+          NTFY_GROUP_CHANNEL: ${{ secrets.NTFY_GROUP_CHANNEL }}
         run: python check_competitions.py
