@@ -4,10 +4,11 @@ from datetime import date, datetime
 import os
 
 
-def send_notification(title: str, message: str, recipient: str):
+def send_notification(title: str, message: str):
+    channel = os.environ["NTFY_USER_CHANNEL"]
     full_message = f"{title}\n{message}"
     req = urllib.request.Request(
-        f"https://ntfy.sh/{recipient}",
+        f"https://ntfy.sh/{channel}",
         data=full_message.encode("utf-8"),
         headers={
             "Title": "Yleisurheilua tulossa!",
@@ -18,16 +19,6 @@ def send_notification(title: str, message: str, recipient: str):
     )
     with urllib.request.urlopen(req, timeout=10) as resp:
         print(f"  Lähetetty (HTTP {resp.status})")
-
-
-def send_to_all(title: str, message: str):
-    recipients = {
-        "user": os.environ["NTFY_USER_CHANNEL"],
-        "group": os.environ["NTFY_GROUP_CHANNEL"],
-    }
-    for name, channel in recipients.items():
-        print(f"  → {name}")
-        send_notification(title, message, channel)
 
 
 def format_broadcast(comp: dict) -> str:
@@ -52,7 +43,7 @@ def build_message(comp: dict, days_until: int) -> tuple[str, str]:
     else:
         body = f"📅 {name} — {days_until} pv päästä\n{broadcast}"
 
-    return "🏃 Yleisurheilua tulossa!", body
+    return "📅🏃 Yleisurheilua tulossa!", body
 
 
 def main():
@@ -76,7 +67,7 @@ def main():
 
         title, body = build_message(comp, days_until)
         print(f"Lähetetään: {title} | {body}")
-        send_to_all(title, body)
+        send_notification(title, body)
         notifications_sent += 1
 
     print(f"\nValmis. Lähetettiin {notifications_sent} notifikaatiota.")
