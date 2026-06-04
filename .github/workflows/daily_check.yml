@@ -2,14 +2,22 @@ name: Daily competition check
 
 on:
   schedule:
-    - cron: "0 7 * * *"  # Joka aamu klo 07:00 UTC (= 09:00 tai 10:00 Suomessa)
-  workflow_dispatch:       # Mahdollistaa myös manuaalisen ajamisen
+    # Joka aamu klo 07:00 UTC = 09:00 talvella / 10:00 kesällä (Suomen aika)
+    - cron: "0 7 * * *"
+  workflow_dispatch:  # Mahdollistaa manuaalisen ajamisen GitHubista
 
 jobs:
   check:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
       - name: Run competition checker
         env:
