@@ -4,7 +4,7 @@ on:
   schedule:
     # Joka aamu klo 07:00 UTC = 09:00 talvella / 10:00 kesällä (Suomen aika)
     - cron: "0 7 * * *"
-  workflow_dispatch:  # Mahdollistaa manuaalisen ajamisen GitHubista
+  workflow_dispatch:
 
 jobs:
   check:
@@ -23,5 +23,6 @@ jobs:
 
       - name: Run competition checker
         env:
-          NTFY_CHANNEL: ${{ secrets.NTFY_CHANNEL }}
+          PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
+          PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
         run: python check_competitions.py
