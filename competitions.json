@@ -1,0 +1,304 @@
+[
+{
+    "name": "Timanttiliiga — Rooma",
+    "date": "2026-06-04",
+    "broadcast_start_time": "22:00",
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Tukholma",
+    "date": "2026-06-07",
+    "broadcast_start_time": "18:00",
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Oslo",
+    "date": "2026-06-10",
+    "broadcast_start_time": "21:00",
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Doha",
+    "date": "2026-06-19",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Pariisi",
+    "date": "2026-06-28",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Eugene",
+    "date": "2026-07-04",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Monaco",
+    "date": "2026-07-10",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Lontoo",
+    "date": "2026-07-18",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Lausanne",
+    "date": "2026-08-21",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Chorzów",
+    "date": "2026-08-23",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Zürich",
+    "date": "2026-08-27",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Brysseli",
+    "date": "2026-09-04",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Timanttiliiga - Brysseli",
+    "date": "2026-09-05",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [0]
+},
+{
+    "name": "Motonet GP - Lahti",
+    "date": "2026-06-10",
+    "broadcast_start_time": "18:00",
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Motonet GP - Kuortane",
+    "date": "2026-06-20",
+    "broadcast_start_time": "15:45",
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Motonet GP - Joensuu",
+    "date": "2026-07-08",
+    "broadcast_start_time": "18:00",
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Motonet GP - Tampere",
+    "date": "2026-07-12",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Motonet GP - Espoo",
+    "date": "2026-08-19",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-10",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [7, 1]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-11",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-12",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-13",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-14",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-15",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-16",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Yleisurheilun EM-kilpailut - Birmingham",
+    "date": "2026-08-17",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Ostrava Golden Spike",
+    "date": "2026-06-16",
+    "broadcast_start_time": "19:00",
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "FBK Games",
+    "date": "2026-06-21",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Memorial Borisa Hanzekovica",
+    "date": "2026-06-26",
+    "broadcast_start_time": null,
+    "channel": "MTV Urheilu",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Kalevan Kisat",
+    "date": "2026-07-24",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Kalevan Kisat",
+    "date": "2026-07-25",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "Kalevan Kisat",
+    "date": "2026-07-26",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+},
+{
+    "name": "U20 MM-kilpailut",
+    "date": "2026-08-05",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "U20 MM-kilpailut",
+    "date": "2026-08-06",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U20 MM-kilpailut",
+    "date": "2026-08-07",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U20 MM-kilpailut",
+    "date": "2026-08-08",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U20 MM-kilpailut",
+    "date": "2026-08-09",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U18 EM-kilpailut",
+    "date": "2026-07-16",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "U18 EM-kilpailut",
+    "date": "2026-07-17",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U18 EM-kilpailut",
+    "date": "2026-07-18",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "U18 EM-kilpailut",
+    "date": "2026-07-19",
+    "broadcast_start_time": null,
+    "channel": null,
+    "notify_days_before": [0]
+},
+{
+    "name": "Suomi-Ruotsi maaottelu",
+    "date": "2026-08-29",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [1, 0]
+},
+{
+    "name": "Suomi-Ruotsi maaottelu",
+    "date": "2026-08-30",
+    "broadcast_start_time": null,
+    "channel": "Yle",
+    "notify_days_before": [0]
+}
+
+]
