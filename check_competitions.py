@@ -65,7 +65,7 @@ def main():
             print(f"Ei muistutusta tänään: {comp['name']} ({days_until} pv)")
             continue
 
-        title, body = build_message(comp, days_until)
+        body = build_message(comp, days_until)
         print(f"Lähetetään: {title} | {body}")
         send_notification(title, body)
         notifications_sent += 1
