@@ -22,17 +22,17 @@ def send_notification(title: str, message: str):
 
 
 def format_broadcast(comp: dict) -> str:
-    channel = comp.get("channel")
+    tv_channel = comp.get("channel")
     time = comp.get("broadcast_start_time")
     if channel and time:
-        return f"📺 {channel} klo {time}"
+        return f"📺 {tv_channel} klo {time}"
     elif channel:
-        return f"📺 {channel} (lähetysaika ei tiedossa)"
+        return f"📺 {tv_channel} (lähetysaika ei tiedossa)"
     else:
         return "📺 Ei TV-lähetystietoa"
 
 
-def build_message(comp: dict, days_until: int) -> tuple[str, str]:
+def build_message(comp: dict, days_until: int) -> str:
     name = comp["name"]
     broadcast = format_broadcast(comp)
 
