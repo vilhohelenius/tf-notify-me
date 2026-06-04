@@ -27,6 +27,11 @@ Add two secrets to your repo under **Settings → Secrets and variables → Acti
 
 Go to **Actions → Daily competition check → Run workflow** to trigger a manual run and verify you receive a notification.
 
+### Alternative setup
+
+Use the subscription link to instantly get notifications via the Pushover application:
+[pushover.net/subscribe/TFNotification](https://pushover.net/subscribe/TFNotification-u26a4ocirmnwjba)
+
 ## Notifications
 
 The workflow runs daily at 07:00 UTC (09:00–10:00 Finnish time). Notifications look like this:
