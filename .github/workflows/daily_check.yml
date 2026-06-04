@@ -1,0 +1,17 @@
+name: Daily competition check
+
+on:
+  schedule:
+    - cron: "0 7 * * *"  # Joka aamu klo 07:00 UTC (= 09:00 tai 10:00 Suomessa)
+  workflow_dispatch:       # Mahdollistaa myös manuaalisen ajamisen
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run competition checker
+        env:
+          NTFY_CHANNEL: ${{ secrets.NTFY_CHANNEL }}
+        run: python check_competitions.py
