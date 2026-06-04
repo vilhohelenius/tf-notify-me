@@ -14,7 +14,7 @@ def send_notification(title: str, message: str):
         "user": user_key,
         "title": title,
         "message": message,
-        "priority": 1,  # high — ääni ja ilmoitus läpi hiljaisesta tilasta
+        "priority": 1,
     }).encode("utf-8")
 
     req = urllib.request.Request(
@@ -42,13 +42,13 @@ def build_message(comp: dict, days_until: int) -> tuple[str, str]:
     broadcast = format_broadcast(comp)
 
     if days_until == 0:
-        title = f"🔥 {name} — TÄNÄÄN!"
+        body = f"🔥 {name} — TÄNÄÄN!\n{broadcast}"
     elif days_until == 1:
-        title = f"📅 {name} — HUOMENNA!"
+        body = f"📅 {name} — HUOMENNA!\n{broadcast}"
     else:
-        title = f"📅 {name} — {days_until} pv päästä"
+        body = f"📅 {name} — {days_until} pv päästä\n{broadcast}"
 
-    return title, broadcast
+    return "🏃📅 Yleisurheilua tulossa!", body
 
 
 def main():
