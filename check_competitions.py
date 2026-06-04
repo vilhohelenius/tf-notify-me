@@ -43,7 +43,7 @@ def build_message(comp: dict, days_until: int) -> tuple[str, str]:
     else:
         body = f"📅 {name} — {days_until} pv päästä\n{broadcast}"
 
-    return "📅🏃 Yleisurheilua tulossa!", body
+    return body
 
 
 def main():
