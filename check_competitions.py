@@ -4,9 +4,9 @@ from datetime import date, datetime
 import os
 
 
-def send_notification(title: str, message: str):
+def send_notification(message: str):
     channel = os.environ["NTFY_USER_CHANNEL"]
-    full_message = f"{title}\n{message}"
+    full_message = f"{message}"
     req = urllib.request.Request(
         f"https://ntfy.sh/{channel}",
         data=full_message.encode("utf-8"),
