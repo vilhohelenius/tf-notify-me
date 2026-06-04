@@ -66,8 +66,8 @@ def main():
             continue
 
         body = build_message(comp, days_until)
-        print(f"Lähetetään: {title} | {body}")
-        send_notification(title, body)
+        print(f"Lähetetään: {body}")
+        send_notification(body)
         notifications_sent += 1
 
     print(f"\nValmis. Lähetettiin {notifications_sent} notifikaatiota.")
