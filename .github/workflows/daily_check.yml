@@ -24,5 +24,4 @@ jobs:
       - name: Run competition checker
         env:
           NTFY_USER_CHANNEL: ${{ secrets.NTFY_USER_CHANNEL }}
-          NTFY_GROUP_CHANNEL: ${{ secrets.NTFY_GROUP_CHANNEL }}
         run: python check_competitions.py
