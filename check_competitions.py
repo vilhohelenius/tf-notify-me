@@ -5,11 +5,13 @@ import os
 
 
 def send_notification(ntfy_channel: str, title: str, message: str):
+    # HTTP headers support latin-1 only — emojis go in the body instead
+    full_message = f"{title}\n{message}"
     req = urllib.request.Request(
         f"https://ntfy.sh/{ntfy_channel}",
-        data=message.encode("utf-8"),
+        data=full_message.encode("utf-8"),
         headers={
-            "Title": title,
+            "Title": "Yleisurheilua tulossa!",
             "Tags": "runner,calendar",
         },
         method="POST",
