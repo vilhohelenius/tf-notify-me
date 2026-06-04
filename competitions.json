@@ -1,5 +1,12 @@
 [
 {
+    "name": "Testikilpailu",
+    "date": "2026-06-04",
+    "broadcast_start_time": "17:00",
+    "channel": "Yle",
+    "notify_days_before": [1, 0]
+},
+{
     "name": "Timanttiliiga — Rooma",
     "date": "2026-06-04",
     "broadcast_start_time": "22:00",
