@@ -7,14 +7,16 @@ import os
 def send_notification(ntfy_channel: str, title: str, message: str):
     # HTTP headers support latin-1 only — emojis go in the body instead
     full_message = f"{title}\n{message}"
+    # Pushover
     req = urllib.request.Request(
-        f"https://ntfy.sh/{ntfy_channel}",
-        data=full_message.encode("utf-8"),
-        headers={
-            "Title": "Yleisurheilua tulossa!",
-            "Priority": "urgent",
-            "Tags": "runner,calendar",
-        },
+        "https://api.pushover.net/1/messages.json",
+        data=urllib.parse.urlencode({
+            "token": os.environ["PUSHOVER_APP_TOKEN"],
+            "user": os.environ["PUSHOVER_USER_KEY"],
+            "title": "Yleisurheilua tulossa!",
+            "message": f"{title}\n{body}",
+            "priority": 1,
+        }).encode("utf-8"),
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=10) as resp:
