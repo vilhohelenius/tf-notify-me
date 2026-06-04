@@ -1,22 +1,25 @@
 import json
 import urllib.request
+import urllib.parse
 from datetime import date, datetime
 import os
 
 
-def send_notification(ntfy_channel: str, title: str, message: str):
-    # HTTP headers support latin-1 only — emojis go in the body instead
-    full_message = f"{title}\n{message}"
-    # Pushover
+def send_notification(title: str, message: str):
+    app_token = os.environ["PUSHOVER_APP_TOKEN"]
+    user_key = os.environ["PUSHOVER_USER_KEY"]
+
+    payload = urllib.parse.urlencode({
+        "token": app_token,
+        "user": user_key,
+        "title": title,
+        "message": message,
+        "priority": 1,  # high — ääni ja ilmoitus läpi hiljaisesta tilasta
+    }).encode("utf-8")
+
     req = urllib.request.Request(
         "https://api.pushover.net/1/messages.json",
-        data=urllib.parse.urlencode({
-            "token": os.environ["PUSHOVER_APP_TOKEN"],
-            "user": os.environ["PUSHOVER_USER_KEY"],
-            "title": "Yleisurheilua tulossa!",
-            "message": f"{title}\n{body}",
-            "priority": 1,
-        }).encode("utf-8"),
+        data=payload,
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=10) as resp:
@@ -49,7 +52,6 @@ def build_message(comp: dict, days_until: int) -> tuple[str, str]:
 
 
 def main():
-    ntfy_channel = os.environ["NTFY_CHANNEL"]
     today = date.today()
 
     with open("competitions.json", encoding="utf-8") as f:
@@ -70,7 +72,7 @@ def main():
 
         title, body = build_message(comp, days_until)
         print(f"Lähetetään: {title} | {body}")
-        send_notification(ntfy_channel, title, body)
+        send_notification(title, body)
         notifications_sent += 1
 
     print(f"\nValmis. Lähetettiin {notifications_sent} notifikaatiota.")
