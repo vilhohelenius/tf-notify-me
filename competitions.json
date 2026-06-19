@@ -30,14 +30,14 @@
 {
     "name": "Timanttiliiga - Doha",
     "date": "2026-06-19",
-    "broadcast_start_time": null,
+    "broadcast_start_time": "19:00",
     "channel": "MTV Urheilu",
     "notify_days_before": [1, 0]
 },
 {
     "name": "Timanttiliiga - Pariisi",
     "date": "2026-06-28",
-    "broadcast_start_time": null,
+    "broadcast_start_time": "19:00",
     "channel": "MTV Urheilu",
     "notify_days_before": [1, 0]
 },
@@ -198,7 +198,7 @@
 {
     "name": "FBK Games",
     "date": "2026-06-21",
-    "broadcast_start_time": null,
+    "broadcast_start_time": "16:00",
     "channel": "MTV Urheilu",
     "notify_days_before": [1, 0]
 },
