@@ -26,10 +26,11 @@ def format_broadcast(comp: dict) -> str:
     time = comp.get("broadcast_start_time")
     if tv_channel and time:
         return f"📺 {tv_channel} klo {time}"
-    elif channel:
+    elif tv_channel:
         return f"📺 {tv_channel} (lähetysaika ei tiedossa)"
     else:
         return "📺 Ei TV-lähetystietoa"
+
 
 
 def build_message(comp: dict, days_until: int) -> str:
