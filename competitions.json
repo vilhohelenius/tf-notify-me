@@ -205,7 +205,7 @@
 {
     "name": "Memorial Borisa Hanzekovica",
     "date": "2026-06-26",
-    "broadcast_start_time": null,
+    "broadcast_start_time": 19:00,
     "channel": "MTV Urheilu",
     "notify_days_before": [1, 0]
 },
