@@ -306,6 +306,12 @@
     "broadcast_start_time": null,
     "channel": "Yle",
     "notify_days_before": [0]
+},
+{
+    "name": "Challenger - Oulu",
+    "date": "2026-07-01",
+    "broadcast_start_time": "18:15",
+    "channel": "Yle",
+    "notify_days_before": [0]
 }
-
 ]
